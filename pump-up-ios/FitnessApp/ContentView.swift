@@ -13,28 +13,39 @@ struct ContentView: View {
             switch fitnessManager.appState {
             case .loading:
                 LoadingView()
-                    .transition(.asymmetric(
-                        insertion: .opacity.combined(with: .scale(scale: 0.95)),
-                        removal: .opacity.combined(with: .scale(scale: 1.1))
-                    ))
+                    .transition(loadingTransition)
                     .zIndex(3)
             case .unauthenticated:
                 AuthView()
-                    .transition(.asymmetric(
-                        insertion: .opacity.combined(with: .move(edge: .bottom).combined(with: .scale(scale: 0.9))),
-                        removal: .opacity.combined(with: .scale(scale: 0.85))
-                    ))
+                    .transition(authTransition)
                     .zIndex(2)
             case .authenticated:
                 MainTabView()
-                    .transition(.asymmetric(
-                        insertion: .opacity.combined(with: .scale(scale: 0.95).combined(with: .move(edge: .bottom))),
-                        removal: .opacity.combined(with: .move(edge: .leading).combined(with: .scale(scale: 0.9)))
-                    ))
+                    .transition(mainTransition)
                     .zIndex(1)
             }
         }
         .animation(.spring(response: 0.55, dampingFraction: 0.75, blendDuration: 0.3), value: fitnessManager.appState)
+    }
+    
+    // MARK: - Transitions
+    private var loadingTransition: AnyTransition {
+        .asymmetric(
+            insertion: .opacity.combined(with: .scale(scale: 0.95)),
+            removal: .opacity.combined(with: .scale(scale: 1.1))
+        )
+    }
+    
+    private var authTransition: AnyTransition {
+        let insertion = AnyTransition.opacity.combined(with: .move(edge: .bottom)).combined(with: .scale(scale: 0.9))
+        let removal = AnyTransition.opacity.combined(with: .scale(scale: 0.85))
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+    
+    private var mainTransition: AnyTransition {
+        let insertion = AnyTransition.opacity.combined(with: .scale(scale: 0.95)).combined(with: .move(edge: .bottom))
+        let removal = AnyTransition.opacity.combined(with: .move(edge: .leading)).combined(with: .scale(scale: 0.9))
+        return .asymmetric(insertion: insertion, removal: removal)
     }
 }
 
