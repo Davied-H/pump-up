@@ -66,10 +66,10 @@ struct MeditationHeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Meditation")
+                Text(L10n.Meditation.title)
                     .font(.system(size: 28, weight: .bold))
                     .foregroundColor(.white)
-                Text("Find your inner peace")
+                Text(L10n.Meditation.findPeace)
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
             }
@@ -120,7 +120,7 @@ struct FeaturedMeditationCard: View {
 
             // Content
             VStack(alignment: .leading, spacing: 10) {
-                Text("DAILY CALM")
+                Text(L10n.Meditation.dailyCalm)
                     .font(.system(size: 10, weight: .bold))
                     .foregroundColor(Color(hex: "D4FF00"))
                     .tracking(2)
@@ -208,14 +208,14 @@ struct TodayRecommendationSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("For You")
+                Text(L10n.Meditation.forYou)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
 
                 Spacer()
 
                 Button(action: {}) {
-                    Text("See All")
+                    Text(L10n.Common.seeAll)
                         .font(.system(size: 14))
                         .foregroundColor(Color(hex: "D4FF00"))
                 }
@@ -326,7 +326,7 @@ struct QuickSessionsSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Quick Sessions")
+            Text(L10n.Meditation.quickSessions)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 
@@ -403,15 +403,15 @@ struct MeditationStatsView: View {
     var body: some View {
         VStack(spacing: 15) {
             HStack {
-                Text("Your Journey")
+                Text(L10n.Meditation.sessionsCompleted)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
                 Spacer()
             }
 
             HStack(spacing: 15) {
-                StatCard(value: "\(totalMinutes)", label: "Total Minutes", icon: "clock.fill", color: .purple)
-                StatCard(value: "\(totalMinutes / 10)", label: "Sessions", icon: "checkmark.circle.fill", color: .green)
+                StatCard(value: "\(totalMinutes)", label: L10n.string("meditation.total_minutes"), icon: "clock.fill", color: .purple)
+                StatCard(value: "\(totalMinutes / 10)", label: L10n.string("meditation.sessions_completed"), icon: "checkmark.circle.fill", color: .green)
             }
         }
     }

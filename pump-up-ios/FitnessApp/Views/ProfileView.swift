@@ -147,7 +147,7 @@ struct StatsOverviewSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Statistics")
+            Text(L10n.Profile.statistics)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 
@@ -226,14 +226,14 @@ struct AchievementsSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("Achievements")
+                Text(L10n.Profile.achievements)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
 
                 Spacer()
 
                 Button(action: {}) {
-                    Text("View All")
+                    Text(L10n.Common.viewAll)
                         .font(.system(size: 14))
                         .foregroundColor(Color(hex: "D4FF00"))
                 }
@@ -305,7 +305,7 @@ struct GoalsSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Daily Goals")
+            Text(L10n.Profile.dailyGoals)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 

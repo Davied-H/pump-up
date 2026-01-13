@@ -75,10 +75,10 @@ struct WorkoutHeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Workout")
+                Text(L10n.Workout.title)
                     .font(.system(size: 28, weight: .bold))
                     .foregroundColor(.white)
-                Text("Choose your training plan")
+                Text(L10n.Workout.chooseTraining)
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
             }
@@ -169,12 +169,15 @@ struct CategoryChip: View {
 
 // MARK: - Quick Start Section
 struct QuickStartSection: View {
+    @State private var showUpperBodyStrength = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Quick Start")
+            Text(L10n.Workout.quickStart)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 
+            // 第一行
             HStack(spacing: 15) {
                 QuickStartCard(
                     title: "Free Run",
@@ -190,6 +193,89 @@ struct QuickStartSection: View {
                     color: Color.orange
                 )
             }
+            
+            // 第二行 - 上肢力量训练入口
+            NavigationLink(destination: UpperBodyStrengthView()) {
+                HStack(spacing: 15) {
+                    // 图标区域
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        Color(hex: "D4FF00").opacity(0.25),
+                                        Color(hex: "D4FF00").opacity(0.15)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .frame(width: 70, height: 70)
+                        
+                        Image(systemName: "dumbbell.fill")
+                            .font(.system(size: 28, weight: .semibold))
+                            .foregroundColor(Color(hex: "D4FF00"))
+                    }
+                    
+                    // 文字区域
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("上肢力量训练")
+                            .font(.system(size: 18, weight: .bold))
+                            .foregroundColor(.white)
+                        
+                        Text("卧推 • 哑铃划船 • 专业记录")
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundColor(.white.opacity(0.6))
+                        
+                        HStack(spacing: 8) {
+                            HStack(spacing: 4) {
+                                Image(systemName: "flame.fill")
+                                    .font(.system(size: 11))
+                                Text("高强度")
+                                    .font(.system(size: 12, weight: .medium))
+                            }
+                            .foregroundColor(Color.orange)
+                            
+                            HStack(spacing: 4) {
+                                Image(systemName: "clock.fill")
+                                    .font(.system(size: 11))
+                                Text("30-45分钟")
+                                    .font(.system(size: 12, weight: .medium))
+                            }
+                            .foregroundColor(Color(hex: "D4FF00"))
+                        }
+                        .padding(.top, 4)
+                    }
+                    
+                    Spacer()
+                    
+                    // 箭头
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(Color(hex: "D4FF00"))
+                }
+                .padding(16)
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(Color(hex: "1C1C1E"))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                .strokeBorder(
+                                    LinearGradient(
+                                        colors: [
+                                            Color(hex: "D4FF00").opacity(0.3),
+                                            Color(hex: "D4FF00").opacity(0.1)
+                                        ],
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    ),
+                                    lineWidth: 1.5
+                                )
+                        )
+                        .shadow(color: Color(hex: "D4FF00").opacity(0.15), radius: 15, x: 0, y: 5)
+                )
+            }
+            .buttonStyle(PlainButtonStyle())
         }
     }
 }
@@ -240,14 +326,14 @@ struct WorkoutListSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("Recommended")
+                Text(L10n.Workout.recommended)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
 
                 Spacer()
 
                 Button(action: {}) {
-                    Text("See All")
+                    Text(L10n.Common.seeAll)
                         .font(.system(size: 14))
                         .foregroundColor(Color(hex: "D4FF00"))
                 }
@@ -360,7 +446,7 @@ struct MyPlansSection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("My Plans")
+                Text(L10n.Workout.myPlans)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.white)
 
@@ -381,12 +467,12 @@ struct MyPlansSection: View {
                     .font(.system(size: 40))
                     .foregroundColor(.gray)
 
-                Text("No custom plans yet")
+                Text(L10n.Workout.noWorkouts)
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
 
                 Button(action: {}) {
-                    Text("Create Plan")
+                    Text(L10n.Workout.createPlan)
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(.black)
                         .padding(.horizontal, 20)
@@ -501,7 +587,7 @@ struct WorkoutDetailView: View {
 
                     // Description
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("About")
+                        Text(L10n.Common.about)
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
 
@@ -644,7 +730,7 @@ struct StartWorkoutButton: View {
         Button(action: { isStarted = true }) {
             HStack {
                 Image(systemName: "play.fill")
-                Text("Start Workout")
+                Text(L10n.Workout.startWorkout)
                     .font(.system(size: 16, weight: .semibold))
             }
             .foregroundColor(.black)

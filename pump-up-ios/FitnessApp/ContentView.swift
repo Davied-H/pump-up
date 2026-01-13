@@ -101,7 +101,7 @@ struct LoadingView: View {
                 
                 // 标题
                 VStack(spacing: 8) {
-                    Text("FitLife", bundle: .main, comment: "App name displayed on loading screen")
+                    Text(L10n.App.name)
                         .font(.system(size: 42, weight: .bold, design: .rounded))
                         .foregroundStyle(
                             LinearGradient(
@@ -112,10 +112,10 @@ struct LoadingView: View {
                         )
                         .offset(y: isAnimating ? -3 : 3)
                         .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 2)
-                    
+
                     // 加载提示文字
                     HStack(spacing: 4) {
-                        Text("加载中", bundle: .main, comment: "Loading indicator text")
+                        Text(L10n.Common.loading)
                             .font(.system(size: 14, weight: .medium))
                             .foregroundColor(.white.opacity(0.7))
                         

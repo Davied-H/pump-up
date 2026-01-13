@@ -14,10 +14,10 @@ struct HistoryView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 // Tab选择器
-                Picker("历史类型", selection: $selectedTab) {
-                    Text("活动").tag(0)
-                    Text("训练").tag(1)
-                    Text("冥想").tag(2)
+                Picker(L10n.History.title, selection: $selectedTab) {
+                    Text(L10n.History.activityHistory).tag(0)
+                    Text(L10n.History.workoutHistory).tag(1)
+                    Text(L10n.History.meditationHistory).tag(2)
                 }
                 .pickerStyle(.segmented)
                 .padding()
@@ -30,7 +30,7 @@ struct HistoryView: View {
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
             }
-            .navigationTitle("历史记录")
+            .navigationTitle(L10n.History.title)
             .background(Color(.systemGroupedBackground))
         }
     }

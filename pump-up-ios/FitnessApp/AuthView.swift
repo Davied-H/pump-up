@@ -23,11 +23,11 @@ struct AuthView: View {
                         .font(.system(size: 70))
                         .foregroundColor(neonYellow)
                     
-                    Text("FitLife", bundle: .main, comment: "App name")
+                    Text(L10n.App.name)
                         .font(.system(size: 42, weight: .bold))
                         .foregroundColor(.white)
-                    
-                    Text(isLogin ? LocalizedStringKey("auth.welcome_back") : LocalizedStringKey("auth.start_journey"))
+
+                    Text(isLogin ? L10n.Auth.welcomeBack : L10n.Auth.startJourney)
                         .font(.system(size: 18, weight: .medium))
                         .foregroundColor(.gray)
                 }
@@ -50,9 +50,9 @@ struct AuthView: View {
                     }
                 } label: {
                     HStack(spacing: 4) {
-                        Text(isLogin ? LocalizedStringKey("auth.no_account") : LocalizedStringKey("auth.have_account"))
+                        Text(isLogin ? L10n.Auth.noAccount : L10n.Auth.haveAccount)
                             .foregroundColor(.gray)
-                        Text(isLogin ? LocalizedStringKey("auth.register") : LocalizedStringKey("auth.login"))
+                        Text(isLogin ? L10n.Auth.register : L10n.Auth.login)
                             .foregroundColor(neonYellow)
                             .fontWeight(.semibold)
                     }
@@ -111,7 +111,7 @@ struct LoginForm: View {
                         ProgressView()
                             .tint(.black)
                     } else {
-                        Text("auth.login", bundle: .main, comment: "Login button")
+                        Text(L10n.Auth.login)
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.black)
                     }
@@ -133,7 +133,7 @@ struct LoginForm: View {
                     await fitnessManager.login(email: email, password: password)
                 }
             } label: {
-                Text("auth.demo_login", bundle: .main, comment: "Demo login button")
+                Text(L10n.Auth.demoLogin)
                     .font(.system(size: 16))
                     .foregroundColor(neonYellow)
             }
@@ -191,7 +191,7 @@ struct RegisterForm: View {
             
             // Error Messages
             if showPasswordMismatch {
-                Text("auth.password_mismatch", bundle: .main, comment: "Password mismatch error")
+                Text(L10n.Auth.passwordMismatch)
                     .font(.system(size: 14))
                     .foregroundColor(.red)
             }
@@ -220,7 +220,7 @@ struct RegisterForm: View {
                         ProgressView()
                             .tint(.black)
                     } else {
-                        Text("auth.register", bundle: .main, comment: "Register button")
+                        Text(L10n.Auth.register)
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.black)
                     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F535A9DB2F16A6440087C4B9 /* UpperBodyStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535A9DA2F16A6440087C4B9 /* UpperBodyStrengthView.swift */; };
 		F54587602F1637670002D017 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F545875F2F1637670002D017 /* APIService.swift */; };
 		F54587622F16377E0002D017 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54587612F16377E0002D017 /* AuthView.swift */; };
 		F564BD6E2F165232008AA6DB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564BD6D2F165232008AA6DB /* NotificationManager.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F535A9DA2F16A6440087C4B9 /* UpperBodyStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperBodyStrengthView.swift; sourceTree = "<group>"; };
 		F545875F2F1637670002D017 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F54587612F16377E0002D017 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		F564BD6D2F165232008AA6DB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				F564BD7B2F1698AB008AA6DB /* Info.plist.example */,
 				F564BD7D2F169CD6008AA6DB /* SKELETON_USAGE.md */,
 				F564BD7F2F169DDA008AA6DB /* SEARCH_DESIGN.md */,
+				F535A9DA2F16A6440087C4B9 /* UpperBodyStrengthView.swift */,
 			);
 			path = FitnessApp;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				F564BD782F16987F008AA6DB /* AuthView+Localized.swift in Sources */,
 				F564BD6E2F165232008AA6DB /* NotificationManager.swift in Sources */,
 				F54587602F1637670002D017 /* APIService.swift in Sources */,
+				F535A9DB2F16A6440087C4B9 /* UpperBodyStrengthView.swift in Sources */,
 				FA0000010000000000000007 /* MeditationView.swift in Sources */,
 				FA0000010000000000000008 /* ProfileView.swift in Sources */,
 				F564BD702F165249008AA6DB /* HealthKitManager.swift in Sources */,

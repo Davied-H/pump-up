@@ -61,7 +61,7 @@ struct HeaderView: View {
                 Text("Hi,\(user.name)")
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundColor(.white)
-                Text("Welcome Back!")
+                Text(L10n.Home.welcomeBack)
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
             }
@@ -164,7 +164,7 @@ struct RecentActivitySection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Recent Activity")
+            Text(L10n.Home.recentActivity)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 
@@ -174,7 +174,7 @@ struct RecentActivitySection: View {
                     HStack(spacing: 8) {
                         Image(systemName: "shoeprints.fill")
                             .foregroundColor(Color(hex: "D4FF00"))
-                        Text("Steps")
+                        Text(L10n.Home.steps)
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                     }
@@ -247,7 +247,7 @@ struct CaloriesCard: View {
             HStack {
                 Image(systemName: "flame.fill")
                     .foregroundColor(.orange)
-                Text("Calories")
+                Text(L10n.Home.calories)
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(.white)
 
@@ -295,7 +295,7 @@ struct DurationCard: View {
             HStack {
                 Image(systemName: "timer")
                     .foregroundColor(.blue)
-                Text("Durations")
+                Text(L10n.Home.duration)
                     .font(.system(size: 14, weight: .medium))
                     .foregroundColor(.white)
 
@@ -340,7 +340,7 @@ struct TrendingWorkoutsSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("Trending Workout")
+            Text(L10n.Home.trendingWorkout)
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.white)
 

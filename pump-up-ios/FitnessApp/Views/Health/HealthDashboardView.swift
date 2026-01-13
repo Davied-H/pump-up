@@ -93,7 +93,7 @@ struct HealthDashboardView: View {
                 }
                 .padding()
             }
-            .navigationTitle("健康数据")
+            .navigationTitle(L10n.Health.healthData)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: HealthKitSettingsView()) {
@@ -122,15 +122,15 @@ struct HealthKitAuthCard: View {
                 .font(.system(size: 48))
                 .foregroundColor(.red)
 
-            Text("连接健康数据")
+            Text(L10n.Health.connectHealthKit)
                 .font(.headline)
 
-            Text("授权后可同步Apple健康中的步数、心率、睡眠等数据")
+            Text(L10n.Health.enableHealthKit)
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
 
-            Button("授权访问") {
+            Button(L10n.string("health.connect_health_kit")) {
                 onAuthorize()
             }
             .buttonStyle(.borderedProminent)
