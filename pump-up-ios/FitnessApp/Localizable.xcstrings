@@ -1,0 +1,395 @@
+{
+  "sourceLanguage" : "zh-Hans",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld kcal" : {
+
+    },
+    "%lld min" : {
+
+    },
+    "%lld min • %lld kcal" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld min • %2$lld kcal"
+          }
+        }
+      }
+    },
+    "%lld seconds" : {
+
+    },
+    "%lld sets × %lld reps" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld sets × %2$lld reps"
+          }
+        }
+      }
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "%lld%@ / %lld%@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%2$@ / %3$lld%4$@"
+          }
+        }
+      }
+    },
+    "%lldkcal" : {
+
+    },
+    "%lldm" : {
+
+    },
+    "%lldmin" : {
+
+    },
+    "%llds" : {
+
+    },
+    "•" : {
+
+    },
+    "1.0.0" : {
+
+    },
+    "15 min" : {
+
+    },
+    "About" : {
+
+    },
+    "Account" : {
+
+    },
+    "Achievements" : {
+
+    },
+    "auth.confirm_password" : {
+
+    },
+    "auth.demo_login" : {
+      "comment" : "Demo login button"
+    },
+    "auth.email" : {
+
+    },
+    "auth.have_account" : {
+
+    },
+    "auth.login" : {
+      "comment" : "Login button"
+    },
+    "auth.name" : {
+
+    },
+    "auth.no_account" : {
+
+    },
+    "auth.password" : {
+
+    },
+    "auth.password_mismatch" : {
+      "comment" : "Password mismatch error"
+    },
+    "auth.register" : {
+      "comment" : "Register button"
+    },
+    "auth.start_journey" : {
+
+    },
+    "auth.welcome_back" : {
+
+    },
+    "Beginner" : {
+
+    },
+    "Calories" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Change Password" : {
+
+    },
+    "Choose your training plan" : {
+
+    },
+    "Connected Devices" : {
+
+    },
+    "Create Plan" : {
+
+    },
+    "DAILY CALM" : {
+
+    },
+    "Daily Goals" : {
+
+    },
+    "Dark Mode" : {
+
+    },
+    "Done" : {
+
+    },
+    "Durations" : {
+
+    },
+    "Edit Profile" : {
+
+    },
+    "Evening\nRelaxation" : {
+
+    },
+    "Exercises (%lld)" : {
+
+    },
+    "Export Data" : {
+
+    },
+    "Find your inner peace" : {
+
+    },
+    "FitLife" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FitLife"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健身生活"
+          }
+        }
+      }
+    },
+    "Fitness Goal" : {
+
+    },
+    "For You" : {
+
+    },
+    "Get Ready" : {
+
+    },
+    "Great job finishing %@!" : {
+
+    },
+    "Hi,%@" : {
+
+    },
+    "Home" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首页"
+          }
+        }
+      }
+    },
+    "Imperial" : {
+
+    },
+    "Keep Going!" : {
+
+    },
+    "Made with ❤️ by Your Team" : {
+
+    },
+    "Meditation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meditation"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冥想"
+          }
+        }
+      }
+    },
+    "Metric" : {
+
+    },
+    "Music" : {
+
+    },
+    "My Plans" : {
+
+    },
+    "NEXT" : {
+
+    },
+    "No custom plans yet" : {
+
+    },
+    "No workouts found" : {
+
+    },
+    "Notifications" : {
+
+    },
+    "Preferences" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Profile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的"
+          }
+        }
+      }
+    },
+    "Quick Sessions" : {
+
+    },
+    "Quick Start" : {
+
+    },
+    "Recent Activity" : {
+
+    },
+    "Recommended" : {
+
+    },
+    "Reminder" : {
+
+    },
+    "Save" : {
+
+    },
+    "Search workouts..." : {
+
+    },
+    "See All" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Share" : {
+
+    },
+    "Sign Out" : {
+
+    },
+    "Sound" : {
+
+    },
+    "Start Workout" : {
+
+    },
+    "Statistics" : {
+
+    },
+    "Steps" : {
+
+    },
+    "Terms of Service" : {
+
+    },
+    "Total: %@" : {
+
+    },
+    "Trending Workout" : {
+
+    },
+    "Units" : {
+
+    },
+    "Version" : {
+
+    },
+    "Version 1.0.0" : {
+
+    },
+    "View All" : {
+
+    },
+    "Welcome Back!" : {
+
+    },
+    "Workout" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workout"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "锻炼"
+          }
+        }
+      }
+    },
+    "Workout Complete!" : {
+
+    },
+    "Your Journey" : {
+
+    },
+    "加载中" : {
+      "comment" : "Loading indicator text"
+    },
+    "正在准备您的健身之旅" : {
+      "comment" : "Loading subtitle"
+    }
+  },
+  "version" : "1.0"
+}

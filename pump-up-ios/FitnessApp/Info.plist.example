@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 
+    ============================================
+    国际化配置示例 (Info.plist)
+    ============================================
+    
+    将以下配置添加到你的 Info.plist 文件中
+    或者在 Xcode 项目设置中配置
+    ============================================
+    -->
+    
+    <!-- 开发区域设置为中国（简体中文） -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>zh_CN</string>
+    
+    <!-- 应用名称本地化 -->
+    <key>CFBundleDisplayName</key>
+    <string>$(PRODUCT_NAME)</string>
+    
+    <!-- 支持的本地化语言 -->
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>zh-Hans</string>
+        <string>en</string>
+    </array>
+    
+    <!-- 
+    ============================================
+    可选：InfoPlist.strings 本地化应用名称
+    ============================================
+    
+    如果想本地化应用名称，创建以下文件：
+    
+    1. InfoPlist.strings (zh-Hans)
+       "CFBundleDisplayName" = "健身生活";
+       "CFBundleName" = "健身生活";
+    
+    2. InfoPlist.strings (en)
+       "CFBundleDisplayName" = "FitLife";
+       "CFBundleName" = "FitLife";
+    
+    ============================================
+    -->
+    
+</dict>
+</plist>
