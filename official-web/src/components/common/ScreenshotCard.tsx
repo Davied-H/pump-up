@@ -44,11 +44,6 @@ export function ScreenshotCard({
       {/* Screenshot */}
       <div className={cn('relative flex justify-center', reverse && 'md:[direction:ltr]')}>
         <div className="relative max-w-[280px]">
-          {/* Background gradient blob */}
-          <div className={cn(
-            'absolute -inset-8 rounded-full blur-3xl opacity-30',
-            `bg-gradient-to-br ${gradient}`
-          )} />
           <PhoneMockup
             screenshot={screenshot}
             alt={title}
