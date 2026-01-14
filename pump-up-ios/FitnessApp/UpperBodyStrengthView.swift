@@ -27,8 +27,9 @@ struct UpperBodyStrengthView: View {
                         // 2. 线性进度条
                         linearProgressBar
                             .padding(.top, 8)
+                            .padding(.horizontal, 20)
 
-                        // 3. 胶囊Tab动作切换器
+                        // 3. 胶囊Tab动作切换器（全宽滚动）
                         exercisePillTabs
 
                         // 4. 中央大圆环
@@ -37,14 +38,16 @@ struct UpperBodyStrengthView: View {
 
                         // 5. 并排调节器
                         compactAdjusterRow
+                            .padding(.horizontal, 20)
 
                         // 6. LOG SET 主按钮
                         logSetButton
+                            .padding(.horizontal, 20)
 
                         // 7. 简化历史记录
                         sessionHistory
+                            .padding(.horizontal, 20)
                     }
-                    .padding(.horizontal, 20)
                     .padding(.bottom, 40)
                 }
             }
