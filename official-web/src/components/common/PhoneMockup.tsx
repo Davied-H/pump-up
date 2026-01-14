@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { cn } from '@lib/utils'
+import { getAssetUrl } from '@lib/assets'
 
 interface PhoneMockupProps {
   screenshot: string
@@ -58,7 +59,7 @@ export function PhoneMockup({
 
             {/* Screenshot - 放大2%填充 */}
             <img
-              src={screenshot}
+              src={getAssetUrl(screenshot)}
               alt={alt}
               className="relative w-full h-full object-cover scale-[1.10]"
               loading="lazy"
