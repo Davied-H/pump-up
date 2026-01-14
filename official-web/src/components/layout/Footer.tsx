@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-dark-100 border-t border-white/10">
       <div className="container-main py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-heading font-bold text-xl">Pump-Up</span>
             </Link>
             <p className="text-gray-400 text-sm">
-              智能健身追踪，开启健康生活
+              隐私优先的智能健身追踪
             </p>
           </div>
 
@@ -24,6 +24,23 @@ export function Footer() {
             <h3 className="font-heading font-semibold mb-4">产品</h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div>
+            <h3 className="font-heading font-semibold mb-4">资源</h3>
+            <ul className="space-y-2">
+              {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}

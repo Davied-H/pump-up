@@ -6,6 +6,9 @@ import { PricingPage } from '@pages/PricingPage'
 import { AboutPage } from '@pages/AboutPage'
 import { PrivacyPage } from '@pages/PrivacyPage'
 import { TermsPage } from '@pages/TermsPage'
+import { DocsPage } from '@pages/DocsPage'
+import { BlogListPage } from '@pages/BlogListPage'
+import { BlogPostPage } from '@pages/BlogPostPage'
 import { NotFoundPage } from '@pages/NotFoundPage'
 
 function App() {
@@ -19,6 +22,10 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/docs" element={<DocsPage />} />
+          <Route path="/docs/:slug" element={<DocsPage />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

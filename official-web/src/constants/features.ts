@@ -1,4 +1,4 @@
-import { Dumbbell, Brain, Heart, Utensils, Trophy, Activity } from 'lucide-react'
+import { Dumbbell, Brain, Trophy, Activity } from 'lucide-react'
 
 export const workoutTypes = [
   { id: 'strength', name: '力量训练', icon: Dumbbell, color: 'from-purple-500 to-purple-700' },
@@ -20,38 +20,61 @@ export const meditationTypes = [
 
 export const mainFeatures = [
   {
+    id: 'tracking',
+    title: '智能追踪',
+    description: '实时同步步数、卡路里、运动时长，与 Apple HealthKit 深度集成',
+    screenshot: '/images/screenshots/home.png',
+    gradient: 'from-primary to-green-500',
+    icon: Activity,
+    features: ['步数统计', '卡路里消耗', '运动时长', 'HealthKit 同步']
+  },
+  {
     id: 'workout',
-    title: '锻炼追踪',
-    description: '记录每一次训练，涵盖力量、有氧、HIIT、瑜伽等多种类型',
-    icon: Dumbbell,
+    title: '锻炼计划',
+    description: '丰富的训练课程，从力量到有氧，满足不同健身需求',
+    screenshot: '/images/screenshots/workout.png',
     gradient: 'from-purple-500 to-pink-500',
+    icon: Dumbbell,
+    features: ['力量训练', '有氧运动', 'HIIT', '自定义计时']
   },
   {
     id: 'meditation',
     title: '冥想放松',
-    description: '多种冥想课程，帮助你减压、助眠、提升专注力',
-    icon: Brain,
+    description: '多种冥想课程，帮助你助眠、减压、提升专注力',
+    screenshot: '/images/screenshots/meditation.png',
     gradient: 'from-blue-500 to-cyan-500',
+    icon: Brain,
+    features: ['助眠冥想', '减压放松', '专注呼吸', '晨间能量']
   },
   {
-    id: 'health',
-    title: '健康数据',
-    description: '与 Apple HealthKit 无缝集成，实时追踪心率、睡眠等数据',
-    icon: Heart,
-    gradient: 'from-red-500 to-orange-500',
-  },
-  {
-    id: 'nutrition',
-    title: '营养记录',
-    description: '轻松记录每餐摄入，追踪卡路里和营养成分',
-    icon: Utensils,
-    gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    id: 'achievement',
-    title: '成就系统',
-    description: '解锁成就徽章，让健身之路更有动力',
+    id: 'profile',
+    title: '个人成就',
+    description: '追踪你的健身进度，解锁成就徽章，保持动力',
+    screenshot: '/images/screenshots/profile.png',
+    gradient: 'from-yellow-500 to-orange-500',
     icon: Trophy,
-    gradient: 'from-yellow-500 to-amber-500',
+    features: ['身体数据', '运动统计', '成就徽章', '历史记录']
+  }
+]
+
+// Privacy features for the new PrivacySection
+export const privacyFeatures = [
+  {
+    id: 'local',
+    title: '本地优先存储',
+    description: '所有健身数据存储在你的设备上，不强制上传云端',
+    icon: 'shield'
   },
+  {
+    id: 'encrypted',
+    title: '端到端加密',
+    description: '敏感数据传输采用行业标准加密协议保护',
+    icon: 'lock'
+  },
+  {
+    id: 'noTracking',
+    title: '零广告追踪',
+    description: '不收集用于广告投放的用户行为数据',
+    icon: 'eye-off'
+  }
 ]

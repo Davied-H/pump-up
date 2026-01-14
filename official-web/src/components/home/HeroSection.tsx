@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Apple } from 'lucide-react'
+import { ArrowRight, Apple, Shield } from 'lucide-react'
 import { Container } from '@components/common/Container'
 import { Button } from '@components/common/Button'
+import { PhoneMockup } from '@components/common/PhoneMockup'
 
 export function HeroSection() {
   return (
@@ -16,19 +17,35 @@ export function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              全新上线
+              隐私优先设计
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
-              智能健身
+              你的健身数据
               <br />
-              <span className="text-gradient">开启健康生活</span>
+              <span className="text-gradient">只属于你</span>
             </h1>
 
-            <p className="text-gray-400 text-xl md:text-2xl mb-8 max-w-lg">
+            <p className="text-gray-400 text-xl md:text-2xl mb-6 max-w-lg">
               Pump-Up 帮助你追踪锻炼、冥想放松、记录营养，
-              让健康管理变得简单高效
+              所有数据本地存储，绝不上传云端
             </p>
+
+            {/* Privacy badges */}
+            <div className="flex flex-wrap items-center gap-3 mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm text-gray-300 border border-white/10">
+                <Shield className="w-4 h-4 text-primary" />
+                本地存储
+              </div>
+              <div className="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm text-gray-300 border border-white/10">
+                <Shield className="w-4 h-4 text-primary" />
+                隐私优先
+              </div>
+              <div className="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm text-gray-300 border border-white/10">
+                <Shield className="w-4 h-4 text-primary" />
+                无广告追踪
+              </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -73,23 +90,12 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative flex justify-center"
           >
-            {/* Phone mockup */}
-            <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute -inset-20 bg-primary/20 blur-[100px] rounded-full" />
-
-              {/* Phone frame */}
-              <div className="relative bg-dark-100 rounded-[3rem] p-3 shadow-2xl border border-white/10">
-                <div className="bg-dark rounded-[2.5rem] overflow-hidden w-[280px] h-[580px] flex items-center justify-center">
-                  {/* Placeholder for app screenshot */}
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <span className="text-black font-bold text-3xl">P</span>
-                    </div>
-                    <p className="text-gray-400 text-sm">App 截图</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative max-w-[300px]">
+              <PhoneMockup
+                screenshot="/images/screenshots/home.png"
+                alt="Pump-Up App 首页"
+                animate={false}
+              />
             </div>
           </motion.div>
         </div>
