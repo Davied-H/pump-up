@@ -11,9 +11,11 @@ import { BlogListPage } from '@pages/BlogListPage'
 import { BlogPostPage } from '@pages/BlogPostPage'
 import { NotFoundPage } from '@pages/NotFoundPage'
 
+const basename = import.meta.env.BASE_URL
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />

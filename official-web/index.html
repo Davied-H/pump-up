@@ -38,6 +38,22 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function() {
+        var redirect = new URLSearchParams(window.location.search).get('redirect');
+        if (redirect) {
+          // Remove the base path from the redirect if present
+          var basePath = '/pump-up';
+          var path = redirect;
+          if (path.startsWith(basePath)) {
+            path = path.slice(basePath.length) || '/';
+          }
+          // Replace history state to hide the redirect parameter
+          window.history.replaceState(null, '', path);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

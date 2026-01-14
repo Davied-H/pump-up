@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pump Up</title>
+    <script>
+      // GitHub Pages SPA redirect
+      // Redirects all 404s to index.html with the path preserved in query string
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // Get the base path (repository name)
+      const basePath = '/pump-up';
+
+      // Redirect to the index with the path info
+      window.location.replace(
+        basePath + '/?redirect=' + encodeURIComponent(path + search + hash)
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
